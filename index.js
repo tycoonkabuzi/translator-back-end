@@ -154,7 +154,9 @@ app.get("/stream/:mode", (req, res) => {
   const audioItem = queue.shift();
   res.json(audioItem);
 });
-
+app.get("/", (_req, res) => {
+  res.send("Hello from the backend!");
+});
 app.listen(PORT, () => {
   console.log(`✅ Server running on port ${PORT}`);
 });
