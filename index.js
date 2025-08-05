@@ -157,6 +157,10 @@ app.get("/stream/:mode", (req, res) => {
 app.get("/", (_req, res) => {
   res.send("Hello from the backend!");
 });
+
+app.get("/test", (_req, res) => {
+  res.send("this is a test!");
+});
 app.listen(PORT, () => {
   console.log(`✅ Server running on port ${PORT}`);
 });
