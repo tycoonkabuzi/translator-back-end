@@ -14,7 +14,7 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 const upload = multer({ dest: "uploads/" });
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
